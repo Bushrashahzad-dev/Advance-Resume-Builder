@@ -1,16 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Loop from "./Home";
-import Activity from "./Activity";
-import Problem1 from "./problem1";
-import Parent from "./Parent";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <>
-      <Parent />
-
-      {/* <Loop /> */}
-      {/* <Problem1 /> */}
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Signup />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </>
   );
 }
